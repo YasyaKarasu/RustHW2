@@ -1,6 +1,6 @@
 use std::cmp;
 
-pub fn compareString(x: &str, y: &str) -> bool {
+pub fn compare_string(x: &str, y: &str) -> bool {
     let x = x.chars().collect::<Vec<char>>();
     let y = y.chars().collect::<Vec<char>>();
     let xlen = x.len();
@@ -33,16 +33,16 @@ mod tests {
 
     #[test]
     fn test_compare_string() {
-        assert_eq!(compareString("abc", "abc"), false);
-        assert_eq!(compareString("abc", "abcd"), false);
-        assert_eq!(compareString("abcd", "abc"), true);
-        assert_eq!(compareString("abc", "abd"), false);
-        assert_eq!(compareString("abd", "abc"), true);
-        assert_eq!(compareString("a", "a"), false);
-        assert_eq!(compareString("a", "b"), false);
-        assert_eq!(compareString("b", "a"), true);
-        assert_eq!(compareString("a", ""), true);
-        assert_eq!(compareString("", "a"), false);
-        assert_eq!(compareString("", ""), false);
+        assert_eq!(compare_string("abc", "abc"), false);
+        assert_eq!(compare_string("abc", "abcd"), false);
+        assert_eq!(compare_string("abcd", "abc"), true);
+        assert_eq!(compare_string("abc", "abd"), false);
+        assert_eq!(compare_string("abd", "abc"), true);
+        assert_eq!(compare_string("a", "a"), false);
+        assert_eq!(compare_string("a", "b"), false);
+        assert_eq!(compare_string("b", "a"), true);
+        assert_eq!(compare_string("a", ""), true);
+        assert_eq!(compare_string("", "a"), false);
+        assert_eq!(compare_string("", ""), false);
     }
 }
